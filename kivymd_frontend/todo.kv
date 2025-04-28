@@ -23,10 +23,10 @@ BoxLayout:
         radius: [20, 20, 20, 20]
 
         MDLabel:
-            text: "Create New Task"  # Nouveau texte ici
+            text: "Create New Task"
             halign: "center"
             theme_text_color: "Custom"
-            text_color: 0, 0.5, 0.5, 1  # Même couleur que le bouton
+            text_color: 0, 0.5, 0.5, 1
             font_style: "H3"
 
         CustomTextField:
@@ -45,8 +45,7 @@ BoxLayout:
             text: "Submit"
             md_bg_color: 0, 0.5, 0.5, 1
             pos_hint: {"center_x": 0.5}
-            on_release: app.add_task()
-
+            on_release: app.add_task(task_title.text, task_description.text)
         Widget:
             size_hint_y: None
             height: "20dp"
